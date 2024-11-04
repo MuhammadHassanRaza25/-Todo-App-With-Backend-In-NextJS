@@ -26,6 +26,7 @@ body {
   }
 }
 
+
 /* header button transition */
 .btn{
   transition: all 0.2s ease-in-out;
@@ -38,7 +39,7 @@ body {
 .box{
   height: 80vh;
   width:60vw;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 225, 255, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 17px;
   overflow: scroll;
@@ -49,7 +50,7 @@ body {
 /* todo container box */
 
 .todoInput{
-  width: 48vw;
+  width: 50vw;
   border: 2px solid lightgrey;
   color: white;
   transition: all 0.5s;
