@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* header button transition */
+.btn{
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover{
+  box-shadow: 0px 0px 5px rgb(0, 225, 255);
+}
+
+/* todo container box */
+.box{
+  height: 80vh;
+  width:60vw;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 17px;
+  overflow: scroll;
+}
+.box::-webkit-scrollbar{
+  display: none;
+}
+/* todo container box */
+
+.todoInput{
+  width: 48vw;
+  border: 2px solid lightgrey;
+  color: white;
+  transition: all 0.5s;
+}
+.todoInput:focus::placeholder{
+  padding-left: 5px;
+  transition: all 0.5s;
+}
+.todoInput:focus{
+  outline: none;
+  transition: all 0.5s;
+}
+
+.todo{
+  overflow: scroll;
+}
+.todo::-webkit-scrollbar{
+  display: none;
+}
+
+@media(max-width:1130px){
+  .box{
+    width:80vw;
+  }
+  .todoInput{
+    width: 67vw;
+  }
+}
+@media(max-width:700px){
+  .box{
+    width:90vw;
+  }
+  .todoInput{
+    width: 67vw;
+  }
+}
+@media(max-width:430px){
+  .listBox{
+    display: flex;
+    flex-direction: column;
+  }
+  .todo{
+    margin-bottom: 5%;
+  }
+  .header{
+    font-size: 22px;
+  }
+  .box{
+    width:90vw;
+  }
+  .todoInput{
+    font-size: 15px;
+    width: 65vw;
+  }
+  .btn{
+    font-size: 16px;
+  }
+}
+@media(max-width:365px){
+  .todoInput{
+    width: 55vw;
+  }
+}
