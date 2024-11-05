@@ -3,7 +3,10 @@ import Header from "./components/Header";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 
-export default function Home() {
+export default async function Home() {
+  let res = await fetch('http://localhost:3000/api/todos')
+  res = await res.json()
+
   return (
   <>
     <Header/>
@@ -11,7 +14,18 @@ export default function Home() {
     <div className="box bg-slate-800">
       <TodoInput/>
       <FilterButtons/>
-      <TodoList/>
+
+      {
+        res.data.map((data)=>{
+            return(
+              <TodoList 
+               id={data.id}
+               todo={data.todo}
+               isComplete={data.isComplete}
+             />  
+            )     
+        })
+      }
     </div>
     
   </>
