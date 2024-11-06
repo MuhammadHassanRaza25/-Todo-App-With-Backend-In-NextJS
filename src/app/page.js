@@ -11,8 +11,9 @@ export default async function Home() {
   <>
     <Header/>
     
-    <div className="box bg-slate-800">
+    <div className="box bg-white">  
       <TodoInput/>
+
       <FilterButtons/>
 
       {

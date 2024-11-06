@@ -18,6 +18,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  background-color:#f6f6f6;
 }
 
 @layer utilities {
@@ -29,17 +30,20 @@ body {
 
 /* header button transition */
 .btn{
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.btn:hover{
-  box-shadow: 0px 0px 5px rgb(0, 225, 255);
+.smallBtn{
+  transition: all 0.3s ease-in-out;
+}
+.smallBtn:hover{
+  box-shadow: 0px 0px 4px green;
 }
 
 /* todo container box */
 .box{
   height: 80vh;
   width:60vw;
-  box-shadow: 0px 0px 20px rgba(0, 225, 255, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 17px;
   overflow: scroll;
@@ -52,7 +56,7 @@ body {
 .todoInput{
   width: 50vw;
   border: 2px solid lightgrey;
-  color: white;
+  color: black;
   transition: all 0.5s;
 }
 .todoInput:focus::placeholder{
