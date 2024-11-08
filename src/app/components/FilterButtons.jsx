@@ -1,5 +1,6 @@
 
 export default function FilterButtons(){
+  
     return(
         <>
           <div className="flex justify-between rounded-xl mb-8">

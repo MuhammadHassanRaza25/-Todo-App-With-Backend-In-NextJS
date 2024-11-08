@@ -2,7 +2,7 @@
 const todosData = [
   {
     id: 1,
-    todo: "Play cricket",
+    todo: "HASSAN KING OF DEVELOPMENT  👑⚡💻",
     isCompleted: false
   },
   {
@@ -24,13 +24,58 @@ const todosData = [
     id: 5,
     todo: "sleep",
     isCompleted: false
-  }
+  },
+  {
+    id: 6,
+    todo: "Play game",
+    isCompleted: false
+  },
 ]
 
 export async function GET(request){
     return Response.json({
         data: todosData,
-        msg: "Data fetched successfully"
-    })
+        msg: "Data Fetched Successfully",
+    });
 }
 // SUMMARY: hamny upar data banake store kia hai then GET ki request main Response.json main jahan data store kia hai uske name se data lelia or message bhejdia.
+
+
+export async function POST(request){
+  const data = await request.json()
+  console.log("DATA FROM FRONT END TO BACKEND", data);
+  
+  const obj = {
+    ...data,
+    isComplete: false,
+    id: todosData.length + 1
+  }
+  todosData.push(obj)
+
+  return Response.json({
+      data: todosData,
+      msg: "Todo Added Successfully",
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
