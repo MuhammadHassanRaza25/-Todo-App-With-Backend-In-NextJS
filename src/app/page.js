@@ -19,7 +19,7 @@ export default async function Home() {
               <TodoList 
                id={data.id}
                todo={data.todo}
-               isComplete={data.isComplete}
+               isCompleted={data.isCompleted}
              />  
             )     
         })

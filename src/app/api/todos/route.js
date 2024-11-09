@@ -58,8 +58,18 @@ export async function POST(request){
   });
 }
 
+export async function PUT(request){
+  const data = await request.json();
+  console.log("update data in backend====>", data)
+  
+  const todoIndex = todosData.findIndex((todo) => todo.id == data.id);   //means hamary data ki id equal ho user ke data ki id se.
+  todosData[todoIndex] = data;  //means wo data daldo jo user ne dia hai.
 
-
+  return Response.json({
+      data: todosData,
+      msg: "Todo Updated Successfully",
+  });
+}
 
 
 
