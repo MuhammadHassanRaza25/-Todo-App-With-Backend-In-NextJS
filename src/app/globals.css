@@ -54,7 +54,6 @@ body {
 /* todo container box */
 
 .todoInput{
-  width: 50vw;
   border: 2px solid lightgrey;
   color: black;
   transition: all 0.5s;

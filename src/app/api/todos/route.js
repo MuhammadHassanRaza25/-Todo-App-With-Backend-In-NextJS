@@ -71,21 +71,16 @@ export async function PUT(request){
   });
 }
 
+export async function DELETE(request){
+  const data = await request.json();
+  console.log("delete data in backend====>", data.id)
+  
+  const todoIndex = todosData.findIndex((todo) => todo.id == data.id);   //means hamary data ki id equal ho user ke data ki id se.
+  todosData.splice(todoIndex, 1)  //means us index pe jake todo remove kardo.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  return Response.json({
+      data: todosData,
+      msg: "Todo Deleted Successfully",
+  });
+}
 
