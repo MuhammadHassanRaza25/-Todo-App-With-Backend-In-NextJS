@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { addTodo } from "../actions/todos";
 
-export default async function TodoInput(){
+export default function TodoInput(){
    const formRef = useRef(null)
 
     return(
@@ -11,7 +11,7 @@ export default async function TodoInput(){
           <form 
             ref={formRef} 
             action={async (formData)=> {
-            await addTodo(formData)
+            addTodo(formData)
             formRef.current?.reset();
             }} 
             className="flex justify-center mb-7"
