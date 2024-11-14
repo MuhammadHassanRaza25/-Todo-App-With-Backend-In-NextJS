@@ -8,7 +8,6 @@ export default async function Home() {
   
   return (
   <>
-
     <Header/>
     
     <div className="box bg-white">  
