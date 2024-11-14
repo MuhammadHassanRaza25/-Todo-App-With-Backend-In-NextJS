@@ -17,6 +17,7 @@ export default async function Home() {
         res.data.map((data)=>{ 
             return(
               <TodoList 
+               key={data.id}
                id={data.id}
                todo={data.todo}
                isCompleted={data.isCompleted}
