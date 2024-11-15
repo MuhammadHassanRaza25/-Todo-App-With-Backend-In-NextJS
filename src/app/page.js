@@ -5,6 +5,7 @@ import TodoList from "./components/TodoList";
 export default async function Home() {
   let res = await fetch(`${process.env.BASE_URL}api/todos`,{cache: "no-cache"})
   res = await res.json()
+  
   // 'http://localhost:3000/api/todos'
   
   return (
