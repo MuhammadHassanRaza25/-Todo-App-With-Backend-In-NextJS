@@ -2,7 +2,7 @@
 const todosData = [
   {
     id: 1,
-    todo: "HASSAN KING OF DEVELOPMENT  👑⚡💻",
+    todo: "HASSAN KING OF DEVELOPMENT",
     isCompleted: false
   },
   {
