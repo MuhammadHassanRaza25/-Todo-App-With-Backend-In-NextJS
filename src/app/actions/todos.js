@@ -5,8 +5,9 @@ import { revalidatePath } from "next/cache";
 export async function addTodo(formData){
   try{
     const todo = formData.get("todo")    //data from input's key: todo.
-    console.log("todo==>", todo);
-
+    console.log("Invalid JSON todo==>", todo);
+    console.log("valid JSON todo==>", JSON.stringify({todo}));
+    
     await fetch(`${process.env.BASE_URL}api/todos`, {
       method: "POST",
       body: JSON.stringify({todo})    
