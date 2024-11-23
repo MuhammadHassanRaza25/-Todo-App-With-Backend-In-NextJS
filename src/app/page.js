@@ -3,7 +3,7 @@ import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 
 export default async function Home() {
-  let res = await fetch(`${process.env.BASE_URL}api/todos`,{cache: "no-cache"})
+  let res = await fetch(`${process.env.BASE_URL}api/todos`)
   res = await res.json()
   
   // 'http://localhost:3000/api/todos'
